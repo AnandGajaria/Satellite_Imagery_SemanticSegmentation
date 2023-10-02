@@ -56,6 +56,8 @@ The implementation section  will provide comprehensive insights into two crucial
    * *Total Patched Images:*  41646
    * *Total relevant Images:*  21924
 
+The below tables depicts the data distribution after splitting.
+
 <div align="center">
 
 | **Section**   | **Data(Images & Masks)** |
