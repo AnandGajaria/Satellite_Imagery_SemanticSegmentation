@@ -9,14 +9,12 @@ The dataset comprises a collection of images drawn from aerial photographs used 
   <tr>
     <td align="center">
       <img src="image1.jpg" alt="Image 1" width="300">
-      <br>
-      Caption for Image 1
+      
     </td>
     <td align="center">
       <img src="image2.jpg" alt="Image 2" width="300">
-      <br>
-      Caption for Image 2
     </td>
+    <br>
   </tr>
 </table>
 
