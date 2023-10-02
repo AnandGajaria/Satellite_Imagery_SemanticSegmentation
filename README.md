@@ -10,6 +10,10 @@ The dataset comprises a collection of images drawn from aerial photographs used 
   <img src="images/Image2.png" width="200">
 </p>
 
+The above images shown are examples of the actual dataset appears to be.
+
+
+
 
 
 
