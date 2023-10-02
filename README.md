@@ -12,8 +12,6 @@ The dataset comprises a collection of images drawn from aerial photographs used 
 
 <p align="center">
   Caption for Image 1
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Caption for Image 2
 </p>
 
 
