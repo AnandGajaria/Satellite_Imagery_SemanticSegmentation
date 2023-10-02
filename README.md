@@ -41,15 +41,60 @@ The implementation section  will provide comprehensive insights into two crucial
 
 **Step 1:** Creating Image and Corresponding reference mask's Patches of size 256*256.
   * Read the Large Image and mask, crop them in nearest size which is divisible by 256.
-     **Note** There is possibility of losing some pixels at the edges while cropping, However as the Images are large, we won't lose a huge amount of Information.
+     **Note** There is possibility of losing some pixels at the edges while cropping, However as the Images are large, Losing some pixels wont signifcantly effect the models learning process.
   * Once we have the cropped images and masks, We extract non overlapping patches from these images.
-  * We then store the patched images and mask into their respective folder.
-     **Note** I can also store these images into a numpy array, however this may create memory issue as there would be a huge chunk of images that would be genrated(41K Images).
+  * I then store the patched images and masks into their respective folder.
+     **Note**Storing these images as a NumPy array is an option, but it comes with a potential memory challenge. Given the large number of images being generated (41K images), this approach may lead to significant memory issues due to the substantial amount of data that needs to be held in memory simultaneously.
 
 **Step 2:** Extract Images which has relevant information. 
   * The rational behind doing this is, as observed in the data description section, the data was highly inclined towards class 0(Background). So while creating patches there could be many images which has only background information. This can result into model being biased towards the background pixels.**Note** It's important to clarify that I am not ignoring background pixels entirely, as they provide valuable information and help mitigate issues related to oversegmentation.
 
 **Step 3:** Once the data is generated, I split the data into three sections **Train**, **Model Evaluation** and **Validation**.
+
+**Final Dataset**
+  *Total Large Images:*  41
+  *Total Patched Images:*  41646
+  *Total relevant Images:*  21924
+
+  <div align="center">
+
+| **Section**   | **Data(Images & Masks)** |
+| ----------- | ------------------ | 
+| **Train** | 15346 |
+| **Validation**   | 4384           |
+| **Evaluation**   | 2194            |
+
+<\div>
+
+
+
+### Model Training.
+
+I employed two distinct architectural models, namely U-Net and Feature Pyramid Network(FPN), to train my segmentation model. U-Net model utilized resnet18 and resnet50 as backbone, where as FPN was trained on  resnet18 as backbone for both the architectures pre-trained weights from the ImageNet dataset were used.
+
+**Model Configuration**
+
+ <div align="center">
+
+| **Parameter**   | **Setting** |
+| ----------- | ------------------ | 
+| **Loss Function** | Categorical_Focal_Jacard_Loss |
+| **Epoch**   | 20           |
+| **Optimizer**   | Adam            |
+| **Activation Function**   | Softmax            |
+| **Batch Size**   | 16            |
+
+<\div>
+
+
+
+
+
+
+
+
+
+
 
 
 
