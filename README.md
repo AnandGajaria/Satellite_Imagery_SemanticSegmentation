@@ -51,12 +51,12 @@ The implementation section  will provide comprehensive insights into two crucial
 
 **Step 3:** Once the data is generated, I split the data into three sections **Train**, **Model Evaluation** and **Validation**.
 
-**Final Dataset**
-  *Total Large Images:*  41
-  *Total Patched Images:*  41646
-  *Total relevant Images:*  21924
+**Final Dataset:**
+    * *Total Large Images:*  41
+   * *Total Patched Images:*  41646
+   * *Total relevant Images:*  21924
 
-  <div align="center">
+<div align="center">
 
 | **Section**   | **Data(Images & Masks)** |
 | ----------- | ------------------ | 
@@ -72,9 +72,9 @@ The implementation section  will provide comprehensive insights into two crucial
 
 I employed two distinct architectural models, namely U-Net and Feature Pyramid Network(FPN), to train my segmentation model. U-Net model utilized resnet18 and resnet50 as backbone, where as FPN was trained on  resnet18 as backbone for both the architectures pre-trained weights from the ImageNet dataset were used.
 
-**Model Configuration**
+**Model Configuration:**
 
- <div align="center">
+<div align="center">
 
 | **Parameter**   | **Setting** |
 | ----------- | ------------------ | 
@@ -85,6 +85,8 @@ I employed two distinct architectural models, namely U-Net and Feature Pyramid N
 | **Batch Size**   | 16            |
 
 <\div>
+
+
 
 
 
