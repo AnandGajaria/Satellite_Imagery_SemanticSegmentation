@@ -10,7 +10,38 @@ The dataset comprises a collection of images drawn from aerial photographs used 
   <img src="images/Image2.png" width="200">
 </p>
 
-The above images shown are examples of the actual dataset appears to be.
+<p align="center">
+  <img src="images/mask1.png" width="190">
+  <img src="images/mask2.png" width="200">
+</p>
+
+The images displayed above serve as illustrative examples that showcase the appearance of both the original image and its corresponding mask.
+
+<div align="center">
+  
+| **Class**   | **Coverage (km²)** | **Label** |
+| ----------- | ------------------ | --------- |
+| **Background** | 125.75           | 0         |
+| **Building**   | 1.85             | 1         |
+| **Woodland**   | 72.02            | 2         |
+| **Water**      | 13.15            | 3         |
+| **Road**       | 3.5              | 4         |
+
+</div>
+
+The  above table provides insights into the distribution of data and the corresponding labels assigned to each class. Notably, it's evident that a substantial number of pixels belong to the background class, while the road and water classes comprise a considerably smaller proportion. This observation highlights the data's inherent imbalance, which necessitates careful handling during the model training process.
+
+## Implementation
+The implementation section  will provide comprehensive insights into two crucial aspects: data preprocessing and model training. It will delve into a detailed explanation of how the data is prepared for model training. Additionally, it will cover the Deep learning architectures and  Hyper parameters employed during the model training phase, offering a comprehensive understanding of the training process.
+
+### Data Preprocessing
+
+
+
+
+
+
+
 
 
 
