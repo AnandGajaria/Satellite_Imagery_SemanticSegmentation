@@ -7,7 +7,7 @@ The dataset comprises a collection of images drawn from aerial photographs used 
 
 <p align="center">
   <img src="images/Image1.png" width="200">
-   <img src="images/Image2.png" width="200">
+  <img src="images/Image2.png" width="200">
 </p>
 
 <p align="center">
