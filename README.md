@@ -36,7 +36,7 @@ The implementation section  will provide comprehensive insights into two crucial
 
 ### Data Preprocessing
 <p align="center">
-  <img src="images/DataPreprocessning.png" width="190">
+  <img src="images/DataPreprocessning.png" width="400">
 </p>
 
 **Step 1:** Creating Image and Corresponding reference mask's Patches of size 256*256.
@@ -44,7 +44,16 @@ The implementation section  will provide comprehensive insights into two crucial
      **Note** There is possibility of losing some pixels at the edges while cropping, However as the Images are large, we won't lose a huge amount of Information.
   * Once we have the cropped images and masks, We extract non overlapping patches from these images.
   * We then store the patched images and mask into their respective folder.
-     **Note** We can also store these images into a numpy array and move to further steps however, this may create memory issue as there would be a huge chunk of images after we patchifying.
+     **Note** I can also store these images into a numpy array, however this may create memory issue as there would be a huge chunk of images that would be genrated(41K Images).
+
+**Step 2:** Extract Images which has relevant information. 
+  * The rational behind doing this is, as observed in the data description section, the data was highly inclined towards class 0(Background). So while creating patches there could be many images which has only background information. This can result into model being biased towards the background pixels.**Note** It's important to clarify that I am not ignoring background pixels entirely, as they provide valuable information and help mitigate issues related to oversegmentation.
+
+**Step 3:** Once the data is generated, I split the data into three sections **Train**, **Model Evaluation** and **Validation**.
+
+
+
+
 
 
 
