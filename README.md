@@ -35,6 +35,19 @@ The  above table provides insights into the distribution of data and the corresp
 The implementation section  will provide comprehensive insights into two crucial aspects: data preprocessing and model training. It will delve into a detailed explanation of how the data is prepared for model training. Additionally, it will cover the Deep learning architectures and  Hyper parameters employed during the model training phase, offering a comprehensive understanding of the training process.
 
 ### Data Preprocessing
+<p align="center">
+  <img src="images/DataPreprocessning.png" width="190">
+</p>
+
+**Step 1:** Creating Image and Corresponding reference mask's Patches of size 256*256.
+  * Read the Large Image and mask, crop them in nearest size which is divisible by 256.
+     **Note** There is possibility of losing some pixels at the edges while cropping, However as the Images are large, we won't lose a huge amount of Information.
+  * Once we have the cropped images and masks, We extract non overlapping patches from these images.
+  * We then store the patched images and mask into their respective folder.
+     **Note** We can also store these images into a numpy array and move to further steps however, this may create memory issue as there would be a huge chunk of images after we patchifying.
+
+
+
 
 
 
