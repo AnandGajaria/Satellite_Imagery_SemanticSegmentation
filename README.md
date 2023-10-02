@@ -5,6 +5,21 @@ The primary objective of this project revolves around tackling the complexities 
 ## Data Discription
 The dataset comprises a collection of images drawn from aerial photographs used in the creation of a comprehensive digital orthophoto encompassing the entire region of Poland. These images originate from publicly available geodetic resources. They were captured at spatial resolutions of either 25 or 50 centimeters per pixel and consist of three spectral bands in RGB format. The dataset encompasses images exhibiting varying levels of saturation, sunlight angles, and shadow lengths, capturing diverse environmental conditions throughout different stages of the vegetation season. To ensure maximum diversity, the dataset's creators manually handpicked 41 orthophoto tiles from different counties spanning all regions, including 33 images at a resolution of 9000 × 9500 pixels and 8 images at a resolution of 4200 × 4700 pixels.
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="image1.jpg" alt="Image 1" width="300">
+      <br>
+      Caption for Image 1
+    </td>
+    <td align="center">
+      <img src="image2.jpg" alt="Image 2" width="300">
+      <br>
+      Caption for Image 2
+    </td>
+  </tr>
+</table>
+
 
 
 
