@@ -17,6 +17,22 @@ The dataset comprises a collection of images drawn from aerial photographs used 
 
 The images displayed above serve as illustrative examples that showcase the appearance of both the original image and its corresponding mask.
 
+The Data Contains 5 classes namely "Background", "Building", "Woodland", "Water" and "Road".
+
+| **Class**   | **Coverage (km²)** | **Label** |
+| ----------- | ------------------ | --------- |
+| **Background** | 125.75           | 0         |
+| **Building**   | 1.85             | 1         |
+| **Woodland**   | 72.02            | 2         |
+| **Water**      | 13.15            | 3         |
+| **Road**       | 3.5              | 4         |
+
+The  above table provides insights into the distribution of data and the corresponding labels assigned to each class. Notably, it's evident that a substantial number of pixels belong to the background class, while the road and water classes comprise a considerably smaller proportion. This observation highlights the data's inherent imbalance, which necessitates careful handling during the model training process.
+
+
+
+
+
 
 
 
