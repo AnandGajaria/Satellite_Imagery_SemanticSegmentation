@@ -52,7 +52,7 @@ The implementation section  will provide comprehensive insights into two crucial
 **Step 3:** Once the data is generated, I split the data into three sections **Train**, **Model Evaluation** and **Validation**.
 
 **Final Dataset:**
-    * *Total Large Images:*  41
+   * *Total Large Images:*  41
    * *Total Patched Images:*  41646
    * *Total relevant Images:*  21924
 
