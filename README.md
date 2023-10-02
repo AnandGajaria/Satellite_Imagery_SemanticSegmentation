@@ -10,7 +10,12 @@ The dataset comprises a collection of images drawn from aerial photographs used 
   <img src="images/Image2.png" width="200">
 </p>
 
-The above images shown are examples of the actual dataset appears to be.
+<p align="center">
+  <img src="images/mask1.png" width="190">
+  <img src="images/mask2.png" width="200">
+</p>
+
+The images displayed above serve as illustrative examples that showcase the appearance of both the original image and its corresponding mask.
 
 
 
