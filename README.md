@@ -96,6 +96,59 @@ The implementation section  will provide comprehensive insights into two crucial
 
 </div>
 
+**Data Augmentation**
+
+* For DataAugmentation ImageDatagenerator utility from Keras is utilized.
+* **Note:** While Augmenting data for image segmentation, a specific folder structure should be followed.
+* /data
+    /train_images
+      /images
+          img1.jpg
+          img2.jpg
+          ...
+   /train_masks
+      /masks
+          mask1.jpg
+          mask2.jpg
+          ...
+  
+    /val_images
+      /images
+          img1.jpg
+          img2.jpg
+          ...
+   /val_masks
+      /masks
+          mask1.jpg
+          mask2.jpg
+          ...
+  
+    /test_images
+      /images
+          img1.jpg
+          img2.jpg
+          ...
+   /test_masks
+      /masks
+          mask1.jpg
+          mask2.jpg
+          ...
+  **Data Augmentation Parameters**
+  
+<div align="center">
+  
+| **Parameter**   | **Value** |
+| ----------- | ------------------ |
+| **rotation_range** | 90           | 
+| **horizontal_flip**   | True             |
+| **width_shift_range**   | 0.9           |
+| **height_shift_range**      | 0.9           |
+| **vertical_flip**       | True              |
+| **fill_mode**       | reflect              |
+
+</div>
+  
+
 
 
 
