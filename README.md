@@ -153,14 +153,18 @@ A similar kind of behaviour was observed in the IOU plot of all the three models
 
 
 <p align="center">
-  <img src="images/U-Net_ResNet18_Prediction_Example.PNG" width="400">
+  <img src="images/U-Net_ResNet18_Prediction_Example.PNG" width="400"><br>
+  <em>U-Net with ResNet18 Backbone</em>
 </p>
 <p align="center">
-<img src="images/U-Net_ResNet50_Prediction_Example.PNG" width="400">
+  <img src="images/U-Net_ResNet50_Prediction_Example.PNG" width="400"><br>
+  <em>U-Net with ResNet50 Backbone</em>
 </p>
 <p align="center">
-  <img src="images/FPN_ResNet18_Prediction_Example.PNG" width="400">
+  <img src="images/FPN_ResNet18_Prediction_Example.PNG" width="400"><br>
+  <em>FPN with ResNet18 Backbone</em>
 </p>
+
 
 
 
