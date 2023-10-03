@@ -170,10 +170,11 @@ A similar kind of behaviour was observed in the IOU plot of all the three models
 * I am also interested in experimenting with training the model on a smaller subset of the dataset, possibly around 3000-4000 images, and then comparing the results with the base model (the current model). One intriguing aspect of this experiment lies in selecting an appropriate sampling strategy that can yield a smaller but less biased set of data points while maximizing information gain.
 ## References
 
-1. Dataset [Link1]([URL1](https://landcover.ai.linuxpolska.com/))
-2. Dataset Understanding. [Link2]([URL2](https://arxiv.org/abs/2005.02264v2))
-3. Pretrained Models.[Link3]([URL3]((https://github.com/qubvel/segmentation_models)))
-4. Data Pre-processing Understanding.[Link4]([URL4]((https://github.com/prodramp/DeepWorks/tree/main/DL-SatelliteImagery)))
+1. [Dataset Link](https://landcover.ai.linuxpolska.com/)
+2. [Dataset Understanding](https://arxiv.org/abs/2005.02264v2)
+3. [Pretrained Models](https://github.com/qubvel/segmentation_models)
+4. [Data Pre-processing Understanding](https://github.com/prodramp/DeepWorks/tree/main/DL-SatelliteImagery)
+
 
 
 
