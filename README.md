@@ -98,43 +98,9 @@ The implementation section  will provide comprehensive insights into two crucial
 
 **Data Augmentation**
 
-* For DataAugmentation ImageDatagenerator utility from Keras is utilized.
-* **Note:** While Augmenting data for image segmentation, a specific folder structure should be followed.
-/data
-    /train_images
-        /images
-            img1.jpg
-            img2.jpg
-            ...
-    /train_masks
-        /masks
-            mask1.jpg
-            mask2.jpg
-            ...
+* For DataAugmentation ImageDatagenerator utility from Keras is leveraged.
 
-/val_images
-    /images
-        img1.jpg
-        img2.jpg
-        ...
-/val_masks
-    /masks
-        mask1.jpg
-        mask2.jpg
-        ...
-
-/test_images
-    /images
-        img1.jpg
-        img2.jpg
-        ...
-/test_masks
-    /masks
-        mask1.jpg
-        mask2.jpg
-        ...
-
-  **Data Augmentation Parameters**
+**Data Augmentation Parameters**
   
 <div align="center">
   
@@ -148,6 +114,51 @@ The implementation section  will provide comprehensive insights into two crucial
 | **fill_mode**       | reflect              |
 
 </div>
+
+## Model Evaluation
+
+In this section, we delve into analysis of the performance of our trained semantic segmentation models. Here, we scrutinize the effectiveness of our models by examining key metrics such as loss curves and Intersection over Union (IOU) scores. By studying the behavior of loss functions and IOU scores across epochs, we gain a deeper understanding of how well our models are able to generalize.
+
+**Loss Plots**
+
+<p align="center">
+  <img src="images/Resnet18_20Epoch_Loss.png" width="220">
+  <img src="images/Resnet50_20Epoch_loss.png" width="220">
+  <img src="images/Resnet18_20Epoch_Loss_FPN.PNG" width="220">
+</p>
+
+**Note:** The first graph from left is U-Net with Resnet18 as backbone, then U-Net with Resnet50 as backbone and Eventually FPN with Resnet18 as backbone.
+
+* **Training loss:** Overall, on observing the plots it can be said that all the models showed a similar kind of Training loss. From this training loss curve, it can be understood that,The minor oscillations indicate that the model is learning steadily without significant disruptions, while the gradual loss reduction demonstrates effective error minimization during training. The final loss value of between the range 0.3-0.4 suggests that the model has learned to fit the training data well.
+  
+* **Validation loss:**
+  
+*  **U-Net with Resnet18 Backbone:** Initially, there is a significant drop in validation loss, indicating rapid learning. However, in the subsequent epochs, there are high-amplitude fluctuations, suggesting instability in the training process. Towards the end, minor fluctuations persist, and the gap between training and validation loss remains relatively consistent. This behavior may indicate that the model struggles to generalize well on unseen data resulting in an unstable model.
+  
+* **U-Net with Resnet50 Backbone:** Similar to the Resnet18-based U-Net, there is an initial sharp decline in validation loss. Subsequently, minor fluctuations occur, followed by episodes of high-amplitude fluctuations in the intermediate epochs. Towards the end, minor fluctuations reappear. The consistent gap between training and validation loss indicates a challenge in generalization. The model may be more complex due to Resnet50, potentially leading to increased sensitivity to data variations.
+  
+* **FPN with Resnet18 Backbone:** This model exhibits a different pattern. Initially, there is a notable drop in validation loss, suggesting efficient learning. Unlike the U-Net models, there are only minor fluctuations in the following epochs. Additionally, the gap between training and validation loss remains small throughout the training process. This behavior implies that the FPN with Resnet18 backbone demonstrates more stable training and better generalization to the validation data compared to the U-Net models.
+
+  **Intersection Over Union(IOU) Plots**
+
+<p align="center">
+  <img src="images/Resnet18_20Epoch_IOU.png" width="220">
+  <img src="images/Resnet50_20Epoch_IOU.png" width="220">
+  <img src="images/Resnet18_20Epoch_IOU_FPN.png" width="220">
+</p>
+
+A similar kind of behaviour was observed in the IOU plot of all the three models. However the FPN model was showing a bit less IOU scores than the other models but the results were stable and reliable.
+
+
+
+
+
+
+
+
+
+
+
 
 
   
