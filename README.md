@@ -121,6 +121,13 @@ In this section, we delve into analysis of the performance of our trained semant
 
 **Loss Curves**
 
+<p align="center">
+  <img src="images/Resnet18_20Epoch_Loss.png.png" width="150">
+  <img src="images/Resnet50_20Epoch_loss.png" width="150">
+  <img src="images/Resnet18_20Epoch_Loss_FPN.png" width="150">
+  
+</p>
+
 
 
 
