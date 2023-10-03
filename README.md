@@ -29,12 +29,149 @@ The images displayed above serve as illustrative examples that showcase the appe
 
 </div>
 
-The  above table provides insights into the distribution of data and the corresponding labels assigned to each class. Notably, it's evident that a substantial number of pixels belong to the background class, while the road and water classes comprise a considerably smaller proportion. This observation highlights the data's inherent imbalance, which necessitates careful handling during the model training process.
+The  above table provides insights into the distribution of data and the corresponding labels assigned to each class. Notably, it's evident that a substantial number of pixels belong to the background class, while the road and building classes comprise a considerably smaller proportion. This observation highlights the data's inherent imbalance, which necessitates careful handling during the model training process.
 
 ## Implementation
-The implementation section  will provide comprehensive insights into two crucial aspects: data preprocessing and model training. It will delve into a detailed explanation of how the data is prepared for model training. Additionally, it will cover the Deep learning architectures and  Hyper parameters employed during the model training phase, offering a comprehensive understanding of the training process.
+The implementation section  will provide comprehensive insights into two crucial aspects: data preprocessing and model training. It will delve into a detailed explanation of how the data is prepared for model training. Additionally, it will cover the Deep learning architectures and  Hyper parameters employed during the model training phase.
 
 ### Data Preprocessing
+<p align="center">
+  <img src="images/DataPreprocessning.png" width="400">
+</p>
+
+**Step 1:** Creating Image and Corresponding reference mask's Patches of size 256*256.
+  * Read the Large Image and mask, crop them in nearest size which is divisible by 256.
+     **Note** There is possibility of losing some pixels at the edges while cropping, However as the Images are large, Losing some pixels wont signifcantly effect the models learning process.
+  * Once we have the cropped images and masks, We extract non overlapping patches from these images.
+  * I then store the patched images and masks into their respective folder.
+     **Note**Storing these images as a NumPy array is an option, but it comes with a potential memory challenge. Given the large number of images being generated (41K images), this approach may lead to significant memory issues due to the substantial amount of data that needs to be held in memory simultaneously.
+
+**Step 2:** Extract Images which has relevant information. 
+  * The rational behind doing this is, as observed in the data description section, the data was highly inclined towards class 0(Background). So while creating patches there could be many images which has only background information. This can result into model being biased towards the background pixels.**Note** It's important to clarify that I am not ignoring background pixels entirely, as they provide valuable information and help mitigate issues related to oversegmentation.
+
+**Step 3:** Once the data is generated, I split the data into three sections **Train**, **Model Evaluation** and **Validation**.
+
+**Final Dataset:**
+   * _Total Large Images:_  41
+   * _Total Patched Images:_  41646
+   * _Total relevant Images:_  21924
+
+
+<div align="center">
+
+| **Section**   | **Data(Images & Masks)** |
+| ----------- | ------------------ | 
+| **Train** | 15346                |
+| **Validation**   | 4384          |
+| **Evaluation**   | 2194          |
+
+</div>
+
+
+
+### Model Training.
+
+**Transfer learning Techniques**
+<div align="center">
+
+|   | **U-Net** | **Feature Pyramid Network** |
+| ----------- | ------------------ | --------- |
+| **Pretrained Backbone** | Resnet18, Resnet50          |Resnet18         |
+| **Weights**   | ImageNet             | ImageNet       |
+| **Library**   | Segmentation_models           | Segmentation_models         |
+
+</div>
+
+**Model Configuration:**
+
+<div align="center">
+
+| **Parameter**   | **Setting** |
+| ----------- | ------------------ | 
+| **Loss Function** | Categorical_Focal_Jacard_Loss |
+| **Epoch**   | 20           |
+| **Optimizer**   | Adam            |
+| **Activation Function**   | Softmax            |
+| **Batch Size**   | 16            |
+
+</div>
+
+**Data Augmentation**
+
+* For DataAugmentation ImageDatagenerator utility from Keras is utilized.
+* **Note:** While Augmenting data for image segmentation, a specific folder structure should be followed.
+/data
+    /train_images
+        /images
+            img1.jpg
+            img2.jpg
+            ...
+    /train_masks
+        /masks
+            mask1.jpg
+            mask2.jpg
+            ...
+
+/val_images
+    /images
+        img1.jpg
+        img2.jpg
+        ...
+/val_masks
+    /masks
+        mask1.jpg
+        mask2.jpg
+        ...
+
+/test_images
+    /images
+        img1.jpg
+        img2.jpg
+        ...
+/test_masks
+    /masks
+        mask1.jpg
+        mask2.jpg
+        ...
+
+  **Data Augmentation Parameters**
+  
+<div align="center">
+  
+| **Parameter**   | **Value** |
+| ----------- | ------------------ |
+| **rotation_range** | 90           | 
+| **horizontal_flip**   | True             |
+| **width_shift_range**   | 0.9           |
+| **height_shift_range**      | 0.9           |
+| **vertical_flip**       | True              |
+| **fill_mode**       | reflect              |
+
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
