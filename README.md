@@ -121,23 +121,29 @@ In this section, we delve into analysis of the performance of our trained semant
 
 **Loss Curves**
 
-<div style="display: inline-block; text-align: center; margin-right: 20px;">
+<p align="center">
   <img src="images/Resnet18_20Epoch_Loss.png" width="220">
-  <br>
-  ResNet18 Loss
-</div>
-
-<div style="display: inline-block; text-align: center; margin-right: 20px;">
   <img src="images/Resnet50_20Epoch_loss.png" width="220">
-  <br>
-  ResNet50 Loss
-</div>
-
-<div style="display: inline-block; text-align: center;">
   <img src="images/Resnet18_20Epoch_Loss_FPN.PNG" width="220">
-  <br>
-  ResNet18 + FPN Loss
-</div>
+</p>
+
+**Note:** The first graph from left is U-Net with Resnet18 as backbone, then U-Net with Resnet50 as backbone and Eventually FPN with Resnet18 as backbone.
+
+* **Training loss:** Overall, on observing the plots it can be said that all the models showed a similar kind of Training loss. From this training loss curve, it can be understood that,The minor oscillations indicate that the model is learning steadily without significant disruptions, while the gradual loss reduction demonstrates effective error minimization during training. The final loss value of between the range 0.3-0.4 suggests that the model has learned to fit the training data well.
+  
+* **Validation loss:**
+  
+*  **U-Net with Resnet18 Backbone:** Initially, there is a significant drop in validation loss, indicating rapid learning. However, in the subsequent epochs, there are high-amplitude fluctuations, suggesting instability in the training process. Towards the end, minor fluctuations persist, and the gap between training and validation loss remains relatively consistent. This behavior may indicate that the model struggles to generalize well on unseen data resulting in an unstable model.
+  
+* **U-Net with Resnet50 Backbone:** Similar to the Resnet18-based U-Net, there is an initial sharp decline in validation loss. Subsequently, minor fluctuations occur, followed by episodes of high-amplitude fluctuations in the intermediate epochs. Towards the end, minor fluctuations reappear. The consistent gap between training and validation loss indicates a challenge in generalization. The model may be more complex due to Resnet50, potentially leading to increased sensitivity to data variations.
+  
+* **FPN with Resnet18 Backbone:** This model exhibits a different pattern. Initially, there is a notable drop in validation loss, suggesting efficient learning. Unlike the U-Net models, there are only minor fluctuations in the following epochs. Additionally, the gap between training and validation loss remains small throughout the training process. This behavior implies that the FPN with Resnet18 backbone demonstrates more stable training and better generalization to the validation data compared to the U-Net models.
+
+
+
+
+
+
 
 
 
