@@ -149,6 +149,16 @@ In this section, we delve into analysis of the performance of our trained semant
 
 A similar kind of behaviour was observed in the IOU plot of all the three models. However the FPN model was showing a bit less IOU scores than the other models but the results were stable and reliable.
 
+### Predicition Results
+
+
+<p align="center">
+  <img src="images/U-Net_ResNet18_Prediction_Example.PNG" width="220">
+  <img src="images/U-Net_ResNet50_Prediction_Example.PNG" width="220">
+  <img src="images/FPN_ResNet18_Prediction_Example.PNG" width="220">
+</p>
+
+
 
 
 
