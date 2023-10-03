@@ -119,7 +119,7 @@ The implementation section  will provide comprehensive insights into two crucial
 
 In this section, we delve into analysis of the performance of our trained semantic segmentation models. Here, we scrutinize the effectiveness of our models by examining key metrics such as loss curves and Intersection over Union (IOU) scores. By studying the behavior of loss functions and IOU scores across epochs, we gain a deeper understanding of how well our models are able to generalize.
 
-**Loss Curves**
+**Loss Plots**
 
 <p align="center">
   <img src="images/Resnet18_20Epoch_Loss.png" width="220">
@@ -138,6 +138,16 @@ In this section, we delve into analysis of the performance of our trained semant
 * **U-Net with Resnet50 Backbone:** Similar to the Resnet18-based U-Net, there is an initial sharp decline in validation loss. Subsequently, minor fluctuations occur, followed by episodes of high-amplitude fluctuations in the intermediate epochs. Towards the end, minor fluctuations reappear. The consistent gap between training and validation loss indicates a challenge in generalization. The model may be more complex due to Resnet50, potentially leading to increased sensitivity to data variations.
   
 * **FPN with Resnet18 Backbone:** This model exhibits a different pattern. Initially, there is a notable drop in validation loss, suggesting efficient learning. Unlike the U-Net models, there are only minor fluctuations in the following epochs. Additionally, the gap between training and validation loss remains small throughout the training process. This behavior implies that the FPN with Resnet18 backbone demonstrates more stable training and better generalization to the validation data compared to the U-Net models.
+
+  **Intersection Over Union(IOU) Plots**
+
+<p align="center">
+  <img src="images/Resnet18_20Epoch_IOU.png" width="220">
+  <img src="images/Resnet50_20Epoch_IOU.png" width="220">
+  <img src="images/Resnet18_20Epoch_IOU_FPN.png" width="220">
+</p>
+
+A similar kind of behaviour was observed in the IOU plot of all the three models. However the FPN model was showing a bit less IOU scores than the other models but the results were stable and reliable.
 
 
 
