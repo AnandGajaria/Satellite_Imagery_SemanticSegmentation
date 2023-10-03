@@ -122,11 +122,22 @@ In this section, we delve into analysis of the performance of our trained semant
 **Loss Curves**
 
 <p align="center">
-  <img src="images/Resnet18_20Epoch_Loss.png" width="220">
-  <img src="images/Resnet50_20Epoch_loss.png" width="220">
-  <img src="images/Resnet18_20Epoch_Loss_FPN.PNG" width="220">
+  <figure>
+    <img src="images/Resnet18_20Epoch_Loss.png" width="220">
+    <figcaption>ResNet18 Loss</figcaption>
+  </figure>
   
+  <figure>
+    <img src="images/Resnet50_20Epoch_loss.png" width="220">
+    <figcaption>ResNet50 Loss</figcaption>
+  </figure>
+  
+  <figure>
+    <img src="images/Resnet18_20Epoch_Loss_FPN.PNG" width="220">
+    <figcaption>ResNet18 + FPN Loss</figcaption>
+  </figure>
 </p>
+
 
 
 
