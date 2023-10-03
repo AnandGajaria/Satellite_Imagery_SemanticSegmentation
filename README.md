@@ -29,10 +29,10 @@ The images displayed above serve as illustrative examples that showcase the appe
 
 </div>
 
-The  above table provides insights into the distribution of data and the corresponding labels assigned to each class. Notably, it's evident that a substantial number of pixels belong to the background class, while the road and water classes comprise a considerably smaller proportion. This observation highlights the data's inherent imbalance, which necessitates careful handling during the model training process.
+The  above table provides insights into the distribution of data and the corresponding labels assigned to each class. Notably, it's evident that a substantial number of pixels belong to the background class, while the road and building classes comprise a considerably smaller proportion. This observation highlights the data's inherent imbalance, which necessitates careful handling during the model training process.
 
 ## Implementation
-The implementation section  will provide comprehensive insights into two crucial aspects: data preprocessing and model training. It will delve into a detailed explanation of how the data is prepared for model training. Additionally, it will cover the Deep learning architectures and  Hyper parameters employed during the model training phase, offering a comprehensive understanding of the training process.
+The implementation section  will provide comprehensive insights into two crucial aspects: data preprocessing and model training. It will delve into a detailed explanation of how the data is prepared for model training. Additionally, it will cover the Deep learning architectures and  Hyper parameters employed during the model training phase.
 
 ### Data Preprocessing
 <p align="center">
@@ -52,27 +52,35 @@ The implementation section  will provide comprehensive insights into two crucial
 **Step 3:** Once the data is generated, I split the data into three sections **Train**, **Model Evaluation** and **Validation**.
 
 **Final Dataset:**
-   * *Total Large Images:*  41
-   * *Total Patched Images:*  41646
-   * *Total relevant Images:*  21924
+   * _Total Large Images:_  41
+   * _Total Patched Images:_  41646
+   * _Total relevant Images:_  21924
 
-The below tables depicts the data distribution after splitting.
 
 <div align="center">
 
 | **Section**   | **Data(Images & Masks)** |
 | ----------- | ------------------ | 
-| **Train** | 15346 |
-| **Validation**   | 4384           |
-| **Evaluation**   | 2194            |
+| **Train** | 15346                |
+| **Validation**   | 4384          |
+| **Evaluation**   | 2194          |
 
-<\div>
+</div>
 
 
 
 ### Model Training.
 
-I employed two distinct architectural models, namely U-Net and Feature Pyramid Network(FPN), to train my segmentation model. U-Net model utilized resnet18 and resnet50 as backbone, where as FPN was trained on  resnet18 as backbone for both the architectures pre-trained weights from the ImageNet dataset were used.
+**Transfer learning Techniques**
+<div align="center">
+
+|   | **U-Net** | **Feature Pyramid Network** |
+| ----------- | ------------------ | --------- |
+| **Pretrained Backbone** | Resnet18, Resnet50          |Resnet18         |
+| **Weights**   | ImageNet             | ImageNet       |
+| **Library**   | Segmentation_models           | Segmentation_models         |
+
+</div>
 
 **Model Configuration:**
 
@@ -86,7 +94,9 @@ I employed two distinct architectural models, namely U-Net and Feature Pyramid N
 | **Activation Function**   | Softmax            |
 | **Batch Size**   | 16            |
 
-<\div>
+</div>
+
+
 
 
 
