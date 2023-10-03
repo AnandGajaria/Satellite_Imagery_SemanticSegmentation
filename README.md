@@ -122,13 +122,9 @@ In this section, we delve into analysis of the performance of our trained semant
 **Loss Plots**
 
 <p align="center">
-  <img src="images/Resnet18_20Epoch_Loss.png" width="400">
-</p>
-<p align="center">
-<img src="images/Resnet50_20Epoch_loss.png" width="400">
-</p>
-<p align="center">
-  <img src="images/Resnet18_20Epoch_Loss_FPN.PNG" width="400">
+   <img src="images/Resnet18_20Epoch_Loss.png" width="220">
+  <img src="images/Resnet50_20Epoch_loss.png" width="220">
+ <img src="images/Resnet18_20Epoch_Loss_FPN.PNG" width="220">
 </p>
 
 **Note:** The first graph from left is U-Net with Resnet18 as backbone, then U-Net with Resnet50 as backbone and Eventually FPN with Resnet18 as backbone.
@@ -157,9 +153,13 @@ A similar kind of behaviour was observed in the IOU plot of all the three models
 
 
 <p align="center">
-  <img src="images/U-Net_ResNet18_Prediction_Example.PNG" width="220">
-  <img src="images/U-Net_ResNet50_Prediction_Example.PNG" width="220">
-  <img src="images/FPN_ResNet18_Prediction_Example.PNG" width="220">
+  <img src="images/U-Net_ResNet18_Prediction_Example.PNG" width="400">
+</p>
+<p align="center">
+<img src="images/U-Net_ResNet50_Prediction_Example.PNG" width="400">
+</p>
+<p align="center">
+  <img src="images/FPN_ResNet18_Prediction_Example.PNG" width="400">
 </p>
 
 
