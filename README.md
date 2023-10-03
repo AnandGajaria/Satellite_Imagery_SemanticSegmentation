@@ -98,43 +98,9 @@ The implementation section  will provide comprehensive insights into two crucial
 
 **Data Augmentation**
 
-* For DataAugmentation ImageDatagenerator utility from Keras is utilized.
-* **Note:** While Augmenting data for image segmentation, a specific folder structure should be followed.
-/data
-    /train_images
-        /images
-            img1.jpg
-            img2.jpg
-            ...
-    /train_masks
-        /masks
-            mask1.jpg
-            mask2.jpg
-            ...
+* For DataAugmentation ImageDatagenerator utility from Keras is leveraged.
 
-/val_images
-    /images
-        img1.jpg
-        img2.jpg
-        ...
-/val_masks
-    /masks
-        mask1.jpg
-        mask2.jpg
-        ...
-
-/test_images
-    /images
-        img1.jpg
-        img2.jpg
-        ...
-/test_masks
-    /masks
-        mask1.jpg
-        mask2.jpg
-        ...
-
-  **Data Augmentation Parameters**
+**Data Augmentation Parameters**
   
 <div align="center">
   
@@ -148,6 +114,15 @@ The implementation section  will provide comprehensive insights into two crucial
 | **fill_mode**       | reflect              |
 
 </div>
+
+## Model Evaluation
+
+In this section, we delve into analysis of the performance of our trained semantic segmentation models. Here, we scrutinize the effectiveness of our models by examining key metrics such as loss curves and Intersection over Union (IOU) scores. By studying the behavior of loss functions and IOU scores across epochs, we gain a deeper understanding of how well our models are able to generalize.
+
+**Loss Curves**
+
+
+
 
 
   
